@@ -305,7 +305,7 @@
     <ClCompile>
       <Optimization>Full</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..\maxsdk\source\c74support\max-includes;..\maxsdk\source\c74support\msp-includes;C:\Program Files\Java\jdk1.8.0_181\include;C:\Program Files\Java\jdk1.8.0_181\include\win32;C:\Program Files\Java\jdk1.8.0\include;C:\Program Files\Java\jdk1.8.0\include\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\Java\jdk-13.0.2\include\win32;C:\Program Files\Java\jdk-13.0.2\include;..\maxsdk\source\c74support\max-includes;..\maxsdk\source\c74support\msp-includes;C:\Program Files\Java\jdk1.8.0_181\include;C:\Program Files\Java\jdk1.8.0_181\include\win32;C:\Program Files\Java\jdk1.8.0\include;C:\Program Files\Java\jdk1.8.0\include\win32;C:\WinDDK\7600.16385.1\inc\atl71;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN_VERSION;C74_EXCLUDE_FROM_COLLECTIVES;WIN32;NDEBUG;_WINDOWS;_USRDLL;WIN_EXT_VERSION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>
@@ -333,7 +333,7 @@
       <AdditionalDependencies>MaxAPI.lib;MaxAudio.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).mxe64</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>..\maxsdk\source\c74support\max-includes\x64;..\maxsdk\source\c74support\msp-includes\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\maxsdk\source\c74support\max-includes\x64;..\maxsdk\source\c74support\msp-includes\x64;C:\WinDDK\7600.16385.1\lib\ATL\amd64</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <ModuleDefinitionFile>
       </ModuleDefinitionFile>
