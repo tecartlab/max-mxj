@@ -22,9 +22,15 @@ Use the badges above to go directly to the CI services.
 
 
 ## To build (Windows)
-Download the Windows x86 Java SE Development Kit 8 (from http://www.oracle.com and install it in the default location (C:\Program Files (x86)\Java). Rename 'C:\Program Files (x86)\Java\jdk1.8.0_xxx' to 'C:\Program Files (x86)\Java\jdk1.8.0'.
+Download the Windows x86 openJava SE Development Kit 13 (from http://jdk.java.net/13/ and install it in the default location (C:\Program Files\Java). Rename if needed to 'C:\Program Files\Java\jdk-13.0.2'.
 
 Open the mxj or mxj~ project in Visual Studio 2013
+
+When using Visual Studio Community 2017 you need to download an older sdk: https://developer.microsoft.com/de-de/windows/downloads/sdk-archive/
+
+and the atl library is in this ISO: https://download.microsoft.com/download/4/A/2/4A25C7D5-EFBE-4182-B6A9-AE6850409A78/GRMWDK_EN_7600_1.ISO
+
+
 
 ## MXJ rules for searching for Java:
 On OSX, it searches in that order: embeded JRE, on system JDK, on system JRE
@@ -41,5 +47,31 @@ The JRE can be found here after installing a java internet plugin:
 Copy that folder and rename it "jre"
 
 On Windows, it searches in that order: embeded JRE, on system JDK, on system JRE
-The search for an embeded JRE is done in the application, it must be a folder named "jre" placed in the same folder as the application .exe 
+The search for an embeded JRE is done in the application, it must be a folder named "jre" placed in the same folder as the application .exe
 
+Make sure the following registry entries are set:
+
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\JDK]
+"CurrentVersion"="1.13"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\JDK\1.13]
+"JavaHome"="C:\\Program Files\\Java\\jdk-13.0.2"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\JRE]
+"CurrentVersion"="1.13"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\JRE\1.13]
+"RuntimeLib"="C:\\Program Files\\Java\\jdk-13.0.2\\bin\\server\\jvm.dll"
+"JavaHome"="C:\\Program Files\\Java\\jdk-13.0.2"
+```
+
+you can copy-paste this lines into a notepad and save the file with a .reg extension and execute it. just make sure all the references are accurate, otherwise mxj will not find the jvm.
+
+If you install the older JDK the registries are set to different subfolder:
+
+ you need to add the above paths (with 'JRE') otherwise this build of mxj will not find the jvm.

@@ -440,7 +440,7 @@ GetApplicationHome(char *buf, jint bufsize)
  * Helpers to look in the registry for a public JRE.
  */
 #define DOTRELEASE  JDK_MAJOR_VERSION "." JDK_MINOR_VERSION
-#define JRE_KEY	    "Software\\JavaSoft\\Java Runtime Environment"
+#define JRE_KEY	    "Software\\JavaSoft\\JRE"
 
 static jboolean
 GetStringFromRegistry(HKEY key, const char *name, char *buf, jint bufsize)
