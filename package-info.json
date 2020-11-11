@@ -7,7 +7,7 @@
 	"extensible" : 0,
 	"homepatcher" : "",
 	"max_version_max" : "none",
-	"max_version_min" : "7.2.5",
+	"max_version_min" : "7.2.6",
 	"name" : "max-mxj",
 	"os" : 	{
 		"macintosh" : 		{
@@ -27,6 +27,6 @@
 	}
 ,
 	"tags" : [ "java" ],
-	"version" : "7.2.5",
+	"version" : "7.2.6",
 	"website" : "http://www.cycling74.com"
 }

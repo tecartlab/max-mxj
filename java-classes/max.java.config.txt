@@ -21,7 +21,7 @@
 
 ; The file format is relatively fragile so pay attention ;
 ; when editing this file !! ;
- 
+
 ; some example options one may use ;
 
 ; add all jars in /Users/topher/java/lib to the system classpath i.e. immutable classpath ;
@@ -42,8 +42,8 @@
 
 ; specify some jvm options ;
 max.jvm.option -Xincgc
-max.jvm.option -Xms64m
-max.jvm.option -Xmx256m
+max.jvm.option -Xms256m
+max.jvm.option -Xmx1g
 
 ; uncomment these options(i.e. remove surrounding semi colons ;
 ; to cause the JVM to be created ;
@@ -52,10 +52,10 @@ max.jvm.option -Xmx256m
 ; your mxj code using JDB or some other debugger which supports ;
 ; the JDI wire protocol ;
 
-; max.jvm.option -Xdebug  ;
-; max.jvm.option -Xnoagent ;
-; max.jvm.option -Xrunjdwp:transport=dt_socket\,address=8074\,server=y\,suspend=n ; 
-; max.jvm.option -XX:-UseSharedSpaces ;
+max.jvm.option -Xdebug  ;
+max.jvm.option -Xnoagent ;
+max.jvm.option -Xrunjdwp:transport=dt_socket\,address=8074\,server=y\,suspend=n ;
+max.jvm.option -XX:-UseSharedSpaces ;
 
 ; 1 = compatible mode (default in 64bit) ;
 ; 2 = hi performance mode (default in 32bit) ;
